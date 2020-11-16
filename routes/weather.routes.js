@@ -8,8 +8,8 @@ const API_KEY = config.get('API_KEY')
 const API_URL = config.get('WEATHER_URL')
 const ICON_URL = config.get('ICON_URL')
 
-router.get('/weather', (req, res) => {
-    const { city, icon } = req.query
+router.get('/weather/:city', (req, res) => {
+    const city = req.params.city
     try {
         request(
             API_URL + `?q=${city}&lang=ru&appid=` + API_KEY,
@@ -24,13 +24,13 @@ router.get('/weather', (req, res) => {
                     return res.status(400).json({ message: 'Город не найден' })
                 }
 
-                if (icon) {
-                    const iconCode = weatherData.weather.map(
-                        element => element.icon
-                    )
-                    const iconUrl = ICON_URL + iconCode + '.png'
-                    return res.redirect(iconUrl)
-                }
+                // if (icon) {
+                //     const iconCode = weatherData.weather.map(
+                //         element => element.icon
+                //     )
+                //     const iconUrl = ICON_URL + iconCode + '.png'
+                //     return res.redirect(iconUrl)
+                // }
 
                 return res.json(weatherData)
             }

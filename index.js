@@ -17,5 +17,5 @@ app.use('*', (err, req, res, next) => {
     res.status(500).send('Something broke!')
 })
 
-const PORT = config.get('port') || 3000
+const PORT = config.get('port') || 5000
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`))

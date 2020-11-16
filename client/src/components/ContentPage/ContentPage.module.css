@@ -1,0 +1,11 @@
+.siteLayout {
+    padding: 0 50px;
+    margin-top: 64px;
+    background: linear-gradient(135deg, #5fc3e4 0%, #e55d87 100%);
+
+}
+
+.siteLayoutBackground {
+    padding: 24px;
+    min-height: 85vh
+}
