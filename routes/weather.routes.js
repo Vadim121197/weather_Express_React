@@ -12,7 +12,7 @@ router.get('/weather/:city', (req, res) => {
     const city = req.params.city
     try {
         request(
-            API_URL + `?q=${city}&lang=ru&appid=` + API_KEY,
+            API_URL + `?q=${city}&lang=en&appid=` + API_KEY,
             (error, response, body) => {
                 const weatherData = JSON.parse(body)
 

@@ -12,13 +12,15 @@ import ContentPage from '../ContentPage/ContentPage'
 
 const App = () => {
     return (
-        <Router>
-            <Layout>
-                <Header />
-                <ContentPage />
-                <Footer />
-            </Layout>
-        </Router>
+        <div className="app">
+            <Router>
+                <Layout>
+                    <Header />
+                    <ContentPage />
+                    <Footer />
+                </Layout>
+            </Router>
+        </div>
     )
 }
 

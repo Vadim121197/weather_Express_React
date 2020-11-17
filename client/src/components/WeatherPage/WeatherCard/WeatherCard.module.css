@@ -1,19 +1,32 @@
 .content {
     height: 70vh;
+    width: 80vw;
     margin: 0 auto;
     padding-top: 20px
 }
 
-.weatherCard {
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 0 0 10px 5px #778899
+.weatherHeader {
+    display: flex;
+    justify-content: space-around;
+    height: 45vh;
+    border-radius: 20px 20px 0 0;
+    background-image:
+        url(https://w-dog.ru/wallpapers/0/69/435853944068249.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.weatherHeader {
+.weatherCard {
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 10px 5px #778899;
+}
+
+.weatherInfoHeader {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 500px
+    width: 300px;
 }
 
 .temperatureValue {
@@ -30,5 +43,14 @@
 
 .descriptionsWeather {
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    margin-top: 50px;
+    font-size: 20px;
+    color: #FFFFFF
+    }
+
+    .cityName {
+        padding-top: 50px;
+        font-size: 50px;
+        color: #FFFFFF
 }
