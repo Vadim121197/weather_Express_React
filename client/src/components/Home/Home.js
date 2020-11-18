@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Layout } from 'antd'
+import { usePosition } from '../../hooks/usePosition'
+import { addLocation } from '../../redux/slices/citySlices'
+import { useDispatch } from 'react-redux'
+const { Content } = Layout
 
 const Home = () => {
-    const { Content } = Layout
+    const { position } = usePosition()
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(addLocation(position))
+    }, [position])
+
     return (
         <Content
             className="site-layout"

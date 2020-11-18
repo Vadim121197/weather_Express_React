@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import Home from '../../Home/Home'
 
 import WeatherPage from '../../WeatherPage/WeatherPage'
@@ -13,6 +13,7 @@ const AppSwitch = () => {
             <Route exact path="/weather">
                 <WeatherPage />
             </Route>
+            <Redirect to="/" />
         </Switch>
     )
 }

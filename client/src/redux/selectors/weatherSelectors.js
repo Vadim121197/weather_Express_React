@@ -23,3 +23,8 @@ export const getDescriptions = createSelector(
     state => state.city.weather.weather[0].main,
     descriptions => descriptions
 )
+
+export const getLocation = createSelector(
+    state => state.city.locations,
+    locations => locations
+)

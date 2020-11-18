@@ -2,5 +2,6 @@
     "port": 5000,
     "API_KEY": "24d1351764367bd66db3d918012dff73",
     "WEATHER_URL": "https://api.openweathermap.org/data/2.5/weather",
+    "WEATHER_FIVE_DAYS": "https://api.openweathermap.org/data/2.5/forecast",
     "ICON_URL": "http://openweathermap.org/img/w/"
 }
