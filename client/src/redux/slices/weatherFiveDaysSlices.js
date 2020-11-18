@@ -8,9 +8,9 @@ const initialState = {
 
 export const cityWeatherFetchFiveDays = createAsyncThunk(
     'cityweateherfivedays',
-    async ({ city }) => {
+    async city => {
         try {
-            return await fetch(`/api/weather/${city}`)
+            return await fetch(`/api/weather/fivedays/${city}`)
                 .then(response => {
                     if (response.status !== 200) {
                         return Promise.reject(new Error(response.statusText))

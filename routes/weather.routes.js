@@ -69,6 +69,7 @@ router.get('/weather/coordinats/:latitude/:longitude', (req, res) => {
 //почасовой API
 router.get('/weather/fivedays/:city', (req, res) => {
     const city = req.params.city
+    console.log(city)
     try {
         request(
             API_URL_FIVE_DAYS +
